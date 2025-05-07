@@ -1,0 +1,50 @@
+#include <stdio.h>
+
+int main() {
+    // Завдання 1: Переведення метрів у см і мм
+    float meters;
+    printf("Enter length in meters: ");
+    scanf_s("%f", &meters);
+    printf("In centimeters: %.2f cm\n", meters * 100);
+    printf("In millimeters: %.2f mm\n\n", meters * 1000);
+
+    // Завдання 2: Площа кола
+    float r, area;
+    const float PI = 3.14f;
+    printf("Enter circle radius: ");
+    scanf_s("%f", &r);
+    area = PI * r * r;
+    printf("Circle area = %.2f\n\n", area);
+
+    // Завдання 3: Переведення секунд у години, хвилини і секунди
+    int totalSeconds, hours, minutes, seconds;
+    printf("Enter number of seconds: ");
+    scanf_s("%d", &totalSeconds);
+    hours = totalSeconds / 3600;
+    minutes = (totalSeconds % 3600) / 60;
+    seconds = totalSeconds % 60;
+    printf("%d seconds = %d hours, %d minutes, %d seconds\n\n", totalSeconds, hours, minutes, seconds);
+
+    // Завдання 4: Перевірка на парність
+    int number;
+    printf("Enter an integer: ");
+    scanf_s("%d", &number);
+    if (number % 2 == 0)
+        printf("Even number\n\n");
+    else
+        printf("Odd number\n\n");
+
+    // Завдання 5: Перетворення малої літери на велику
+    char ch;
+    printf("Enter a lowercase letter: ");
+    scanf_s(" %c", &ch);  // пробіл важливий для пропуску символів з буфера
+    if (ch >= 'a' && ch <= 'z') {
+        char upper = ch - 32;
+        printf("Uppercase: %c\n", upper);
+    }
+    else {
+        printf("That's not a lowercase letter.\n");
+    }
+
+    return 0;
+}
