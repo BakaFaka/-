@@ -1,0 +1,43 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    // Завдання 1: Обчислити ціну гри зі знижкою
+    int price = 450;
+    float discount = 15.0;
+    int finalPrice = price - (int)(price * discount / 100);
+    printf("Game price after 15%% discount: %d UAH\n\n", finalPrice);
+
+    // Завдання 2: Обчислити вік за роком народження
+    int birthYear, currentYear = 2025;
+    printf("Enter your birth year: ");
+    scanf_s("%d", &birthYear);
+    printf("Your age: %d\n\n", currentYear - birthYear);
+
+    // Завдання 3: Евклідова відстань між двома точками
+    float x1, y1, x2, y2, distance;
+    printf("Enter coordinates of first point (x1 y1): ");
+    scanf_s("%f %f", &x1, &y1);
+    printf("Enter coordinates of second point (x2 y2): ");
+    scanf_s("%f %f", &x2, &y2);
+    distance = sqrt((x2 - x1) * (x2 - x1) + (y2 - y1) * (y2 - y1));
+    printf("Distance between points: %.2f\n\n", distance);
+
+    // Завдання 4: Обчислити кінцеву вартість товару зі знижкою
+    float itemPrice, itemDiscount;
+    printf("Enter item price: ");
+    scanf_s("%f", &itemPrice);
+    printf("Enter discount percentage: ");
+    scanf_s("%f", &itemDiscount);
+    float discountedPrice = itemPrice - (itemPrice * itemDiscount / 100);
+    printf("Final price after discount: %.2f\n\n", discountedPrice);
+
+    // Завдання 5: Сума цифр тризначного числа
+    int number, sum;
+    printf("Enter a three-digit number: ");
+    scanf_s("%d", &number);
+    sum = number / 100 + (number / 10) % 10 + number % 10;
+    printf("Sum of digits: %d\n", sum);
+
+    return 0;
+}
